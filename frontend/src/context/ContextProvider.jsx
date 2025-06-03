@@ -17,7 +17,7 @@ const ContextProvider = ({ children }) => {
 
   const loginAdmin = async (data) => {
     const res = await axios.post(
-      "http://localhost:3000/api/v1/admin/login",
+      "https://mernproject-backend-x6az.onrender.com/api/v1/admin/login",
       data,
       {
         withCredentials: true,
@@ -39,7 +39,7 @@ const ContextProvider = ({ children }) => {
 
   const getEmployees = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/v1/emp/all", {
+      const res = await axios.get("https://mernproject-backend-x6az.onrender.com/api/v1/emp/all", {
         withCredentials: true,
       });
       console.log("Employee data:", res.data.employees);
@@ -63,7 +63,7 @@ const ContextProvider = ({ children }) => {
   const createEmployee = async (data) => {
   try {
     const res = await axios.post(
-      "http://localhost:3000/api/v1/emp/add",
+      "https://mernproject-backend-x6az.onrender.com/api/v1/emp/add",
       data,
       {
         withCredentials: true,
@@ -92,7 +92,7 @@ const ContextProvider = ({ children }) => {
 const deleteEmployee = async (id) => {
   try {
     const res = await axios.delete(
-      `http://localhost:3000/api/v1/emp/delete/${id}`,
+      `https://mernproject-backend-x6az.onrender.com/api/v1/emp/delete/${id}`,
       {
         withCredentials: true,
       }
@@ -116,7 +116,7 @@ const deleteEmployee = async (id) => {
 const editEmployee = async (id, formData) => {
   try {
     const res = await axios.put(
-      `http://localhost:3000/api/v1/emp/edit/${id}`,
+      `https://mernproject-backend-x6az.onrender.com/api/v1/emp/edit/${id}`,
       formData,
       {
         withCredentials: true,
